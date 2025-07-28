@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Snuggly Monkey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* About Us Section */
+        .about-section {
+            background-color: #f9fafb;
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .about-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ef4444;
+            margin-bottom: 2rem;
+        }
+
+        .about-text {
+            color: #4b5563;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-text {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .thank-you-text {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        /* Meet the Founders Section */
+        .founders-section {
+            background-color:#4697cc;
+            padding: 64px 0;
+            color: white;
+        }
+
+        .founders-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .founders-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .founders-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .founders-intro {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .founders-description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .founders-signature {
+            padding-top: 1rem;
+        }
+
+        .signature-thanks {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .signature-names {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .signature-title {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .founders-image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .founders-image {
+            background-color: #e5e7eb;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .founders-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* Why Parents Choose Us Section */
+        .why-choose-section {
+            background-color: #f3f4f6;
+            padding: 64px 0;
+        }
+
+        .why-choose-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        .why-choose-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ef4444;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .feature-card.green {
+            background-color: #10b981;
+        }
+
+        .feature-card.red {
+            background-color: #ef4444;
+        }
+
+        .feature-card.yellow {
+            background-color: #f59e0b;
+        }
+
+        .feature-card.blue {
+            background-color: #3b82f6;
+        }
+
+        .feature-card.coral {
+            background-color: #f87171;
+        }
+
+        .feature-icon {
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 0.5rem;
+            fill: currentColor;
+        }
+
+        /* Mission Vision Section */
+        .mission-vision-section {
+            background-color: #f3f4f6;
+            padding: 0 0 64px 0;
+        }
+
+        .mission-vision-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .mission-card,
+        .vision-card {
+            background-color: #ef4444;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+        }
+
+        .mission-title,
+        .vision-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-text,
+        .vision-text {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Behind the Scenes Section */
+        .behind-scenes-section {
+            background-color: #87A56E;
+            padding: 64px 0;
+            color: white;
+        }
+
+        .behind-scenes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        .behind-scenes-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .behind-scenes-text {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background-color: white;
+        }
+
+        /* Ready For Some Snuggles Section */
+        .contact-section {
+            background-color: white;
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .shop-now-btn {
+            background-color: #f87171;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .shop-now-btn:hover {
+            background-color: #f56565;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f87171;
+
+            margin-bottom: 1rem;
+        }
+
+        .contact-subtitle {
+            color: black;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h3{
+            text-align: left;
+            color: #f87171;
+            margin-bottom:1rem ;
+        }
+        .form-custom-btn{
+            display: flex;
+            justify-content: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #f87171;
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background-color: #f87171;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #f56565;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+
+            .about-title,
+            .founders-title {
+                font-size: 2.5rem;
+            }
+
+            .why-choose-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem 1rem;
+                font-size: 0.85rem;
+                min-height: 100px;
+            }
+
+            .founders-content {
+                gap: 2rem;
+            }
+
+            .founders-image img {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .about-section,
+            .founders-section {
+                padding: 48px 0;
+            }
+
+            .about-title,
+            .founders-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .about-text,
+            .founders-description,
+            .signature-thanks {
+                font-size: 1rem;
+            }
+
+            .founders-intro {
+                font-size: 1.125rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.25rem 1rem;
+                font-size: 0.8rem;
+                min-height: 90px;
+            }
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .mission-card,
+            .vision-card {
+                padding: 2rem;
+            }
+
+            .mission-title,
+            .vision-title {
+                font-size: 1.5rem;
+            }
+
+            .mission-text,
+            .vision-text {
+                font-size: 0.95rem;
+            }
+
+            .about-text,
+            .founders-description,
+            .signature-thanks {
+                font-size: 0.95rem;
+            }
+
+            .founders-intro {
+                font-size: 1rem;
+            }
+
+            .founders-image img {
+                height: 300px;
+            }
+
+            .behind-scenes-section,
+            .contact-section {
+                padding: 48px 0;
+            }
+
+            .behind-scenes-title,
+            .contact-title {
+                font-size: 1.75rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .carousel-slide img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <h1 class="about-title">About Us</h1>
+
+            <div class="about-text">
+                <p>
+                    At Snuggly Monkey, we believe that childhood should be as soft, colourful, and
+                    carefree as possible. That's why we design and create adorable, 100% cotton
+                    kidswear for little ones aged 0-6 years — with comfort, practicality, and style at
+                    the heart of every piece.
+                </p>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    From playful rompers and cozy nightwear to twirl-worthy dresses and cute
+                    clothing sets, each product is thoughtfully crafted by us — a parent-led team — to
+                    meet the real needs of real families. With vibrant prints, easy fits, and parent-
+                    friendly prices, we make dressing your little one a joyful part of everyday life.
+                    Thank you for making us a part of your parenting journey. We're so glad you're
+                    here.
+                </p>
+            </div>
+
+            <div class="about-text highlight-text">
+                <p>
+                    With vibrant prints, easy fits, and parent-friendly
+                    prices, we make dressing your little one a joyful part
+                    of everyday life.
+                </p>
+            </div>
+
+            <div class="about-text thank-you-text">
+                <p>
+                    Thank you for making us a part of your parenting
+                    journey. We're so glad you're here.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Founders Section -->
+    <section class="founders-section">
+        <div class="founders-container">
+            <h2 class="founders-title">Meet the Founders</h2>
+
+            <div class="founders-content">
+                <!-- Text Content -->
+                <div class="founders-text">
+                    <p class="founders-intro">
+                        We're Rishika and Akshay: parents, partners, and
+                        the duo behind Snuggly Monkey.
+                    </p>
+
+                    <p class="founders-description">
+                        As mom and dad to a little one, we started Snuggly
+                        Monkey to create comfortable, cute, and affordable
+                        kidswear we could trust. With backgrounds
+                        in management, we combined our strengths:
+                        Rishika designs and markets every piece with love,
+                        while Akshay ensures smooth operations and smart
+                        finances. Together, we're building a brand that's
+                        made by parents, for parents — with softness, style,
+                        and little smiles in mind.
+                    </p>
+
+                    <div class="founders-signature">
+                        <p class="signature-thanks">
+                            Thanks for being a part of our story.
+                        </p>
+                        <p class="signature-names">
+                            Rishika & Akshay
+                        </p>
+                        <p class="signature-title">
+                            Co-founders, Snuggly Monkey
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="founders-image-container">
+                    <div class="founders-image">
+                        <img src="./images/founders.jpg"
+                            alt="Founders - Rishika and Akshay with their child" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Parents Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="why-choose-container">
+            <h2 class="why-choose-title">Why parents choose us</h2>
+
+            <div class="features-grid">
+                <div class="feature-card green">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5" />
+                        <path d="M2 12l10 5 10-5" />
+                    </svg>
+                    <div>100% Soft<br>Cotton Only</div>
+                </div>
+
+                <div class="feature-card red">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                    <div>Designed by Parents,<br>For Parents</div>
+                </div>
+
+                <div class="feature-card yellow">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                        <line x1="9" y1="9" x2="9.01" y2="9" />
+                        <line x1="15" y1="9" x2="15.01" y2="9" />
+                    </svg>
+                    <div>Adorable Vibrant<br>Prints</div>
+                </div>
+
+                <div class="feature-card blue">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    <div>Affordable<br>Everyday Style</div>
+                </div>
+
+                <div class="feature-card coral">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 9V5a3 3 0 0 0-6 0v4" />
+                        <rect x="2" y="9" width="20" height="11" rx="2" ry="2" />
+                    </svg>
+                    <div>Made for<br>Little Movers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Section -->
+    <section class="mission-vision-section">
+        <div class="mission-vision-container">
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <h3 class="mission-title">Our Mission</h3>
+                    <p class="mission-text">
+                        At Snuggly Monkey, we provide a diverse range of trendy yet comfortable kidswear that transcends
+                        affordability and accessibility. Our mission is to offer parents and caregivers a seamless
+                        shopping experience filled with stylish options for their little ones, without compromising on
+                        quality or comfort. We understand the importance of providing high-quality clothing at prices
+                        that are accessible to all families. By offering a wide range of options at competitive prices,
+                        we ensure that every parent can afford to dress their child in stylish and comfortable attire
+                        without breaking the bank.
+                    </p>
+                </div>
+
+                <div class="vision-card">
+                    <h3 class="vision-title">Our Vision</h3>
+                    <p class="vision-text">
+                        To infuse joy into the lives of babies, kids, and their families through our irresistible range
+                        of adorable and comfortable outfits without burning a hole in their pockets. We understand the
+                        magic that comes from seeing their little ones light up in clothing that looks cute, and feels
+                        cozy and comforting. That's why we pour our hearts into every design, ensuring that each piece
+                        not only meets the highest standards of quality but also brings a smile to the faces of both
+                        children and parents alike.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Behind the Scenes Section -->
+    <section class="behind-scenes-section">
+        <div class="behind-scenes-container">
+            <h2 class="behind-scenes-title">Behind the Scenes</h2>
+
+            <p class="behind-scenes-text">
+                At Snuggly Monkey, our end-to-end manufacturing process is entirely in-house, allowing us to maintain full control over product quality and consistency. It all begins with in-house design and sampling, where each style is thoughtfully developed with both function and comfort in mind. From there, our skilled team oversees every step of production including fabric cutting, precision stitching, ironing, and final packing.
+            </p>
+
+            <p class="behind-scenes-text">
+                Our setup is supported by stringent quality control protocols at every stage to ensure that each garment meets our exacting standards. This vertically integrated model not only ensures better efficiency and accountability but also enables us to deliver premium-quality kidswear that parents can rely on every single time.
+            </p>
+
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/7876694/pexels-photo-7876694.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Manufacturing process 1" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/7876695/pexels-photo-7876695.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Manufacturing process 2" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/7876696/pexels-photo-7876696.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Manufacturing process 3" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/7876697/pexels-photo-7876697.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Manufacturing process 4" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button class="carousel-btn" id="prevBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="15,18 9,12 15,6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="carousel-indicators">
+                        <button class="carousel-dot active" onclick="goToSlide(0)"></button>
+                        <button class="carousel-dot" onclick="goToSlide(1)"></button>
+                        <button class="carousel-dot" onclick="goToSlide(2)"></button>
+                        <button class="carousel-dot" onclick="goToSlide(3)"></button>
+                    </div>
+
+                    <button class="carousel-btn" id="nextBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready For Some Snuggles Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">Ready For Some Snuggles?</h2>
+            <p class="contact-subtitle">
+                Don't let the cuteness slip away! Drop us a line and let's make memories together.
+                Think of the smiles — and yes, offer while our attention is so snuggled in the best!
+            </p>
+            <p><strong>Limited stock. All love. Made for tiny adventures.</strong></p>
+            <p><strong>Shop now and experience the comfort every parent is talking about!</strong></p>
+            <p><strong>Grab Yours Before It's Gone</strong></p>
+            <div class="shop-now-wrapper">
+                <a href="" class="shop-now-btn">Shop Now</a>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Let's Get in Touch</h3>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">NAME</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-MAIL</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">MESSAGE</label>
+                        <textarea id="message" name="message" class="form-textarea"
+                            placeholder="Tell us about your inquiry..." required></textarea>
+                    </div>
+                    <div class="form-custom-btn">
+                    <button type="submit" class="submit-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const track = document.getElementById('carouselTrack');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateCarousel() {
+            const translateX = -currentSlide * 100;
+            track.style.transform = `translateX(${translateX}%)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateCarousel();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarousel();
+            }
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-play carousel
+        setInterval(() => {
+            if (currentSlide < totalSlides - 1) {
+                nextSlide();
+            } else {
+                currentSlide = 0;
+                updateCarousel();
+            }
+        }, 5000);
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Here you would typically send the data to your server
+            console.log('Form submitted:', data);
+
+            // Show success message (you can customize this)
+            alert('Thank you for your message! We\'ll get back to you soon.');
+
+            // Reset form
+            this.reset();
+        });
+
+        // Initialize carousel
+        updateCarousel();
+    </script>
+</body>
+
+</html>
